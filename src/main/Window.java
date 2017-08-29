@@ -2,24 +2,18 @@ package main;
 
 import javax.swing.*;
 
-/**
- * Created by Alex on 26.08.2017.
- */
 public class Window {
 
-    public static final int HEIGHT = 880;
-    public static final int WIDTH = 455;
-    private JFrame window;
-    private Board board;
+    private static final int HEIGHT = 880;
+    private static final int WIDTH = 455;
 
-
-    Window() {
-        window = new JFrame("Tetris game");
+    private Window() {
+        JFrame window = new JFrame("Super game");
         window.setSize(WIDTH, HEIGHT);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setLocationRelativeTo(null);
-        board = new Board();
+        Board board = new Board();
         window.add(board);
         window.addKeyListener(board);
         window.setVisible(true);
